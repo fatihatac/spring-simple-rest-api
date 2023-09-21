@@ -21,7 +21,6 @@ public class CourseController {
     @GetMapping("/courses")
     public List<Course> getAllCourses(){
         return repository.findAll();
-
     }
 
     @GetMapping("/courses/{id}")
@@ -43,7 +42,7 @@ public class CourseController {
         repository.save(course);
     }
     @DeleteMapping("/courses{id}")
-    public void updateCourse(@PathVariable long id){
+    public void deleteCourse(@PathVariable long id){
         repository.deleteById(id);
     }
 }
